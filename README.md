@@ -1,4 +1,5 @@
 # Justinanimelist - Next-js Project
+
 This project is an Anime List website created using [Next.js](https://nextjs.org/) project with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app) and styling using Tailwindcss. Following the video course by Dea Afrizal. The website includes features such as search, pagination, detailed anime information, login, and more. Besides following the video course, I have also made significant improvements in terms of code structure and UI/UX experience.
 
 ## Features
@@ -13,7 +14,6 @@ This project is an Anime List website created using [Next.js](https://nextjs.org
 
 - **Code Structure**: Refactored and optimized the code for better maintainability and readability.
 - **UI/UX Enhancements**: Improved the user interface and experience to ensure a more intuitive and engaging user interaction.
-
 
 ## Getting Started
 

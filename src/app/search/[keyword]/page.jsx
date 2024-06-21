@@ -1,4 +1,4 @@
-import { getAnimeData } from "@/app/apis/api";
+import { getAnimeData } from "@/apis/api";
 import AnimeList from "@/components/AnimeList";
 import Header from "@/components/AnimeList/Header";
 export default async function Page({ params }) {

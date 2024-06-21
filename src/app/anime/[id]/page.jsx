@@ -1,4 +1,4 @@
-import { getAnimeData } from "@/app/apis/api";
+import { getAnimeData } from "@/apis/api";
 import VideoPlayer from "@/components/Utilities/VideoPlayer";
 import Image from "next/image";
 export default async function Page({ params }) {

@@ -3,7 +3,7 @@ import AnimeList from "@/components/AnimeList";
 import HeaderMenu from "@/components/Utilities/HeaderMenu";
 import Pagination from "@/components/Utilities/Pagination";
 import { useEffect, useState } from "react";
-import { getAnimeData, getAnimePagination } from "../apis/api";
+import { getAnimeData, getAnimePagination } from "../../apis/api";
 import Loading from "../loading";
 
 export default function Page() {

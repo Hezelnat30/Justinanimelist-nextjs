@@ -1,8 +1,9 @@
+"use client";
+import { useRouter } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
-import Link from "next/link";
-import React from "react";
 
-export default function NotFound() {
+export default function Page() {
+  const router = useRouter();
   return (
     <div className="flex flex-col items-center justify-center min-h-screen overflow-hidden">
       <div className="text-center">
@@ -14,13 +15,13 @@ export default function NotFound() {
           Maaf, halaman yang Anda cari tidak ada.
         </p>
         <div className="mt-6">
-          <Link
-            href="/"
+          <button
+            onClick={() => router.back()}
             className="inline-flex justify-center gap-2 items-center px-4 py-2 text-white bg-color-primary rounded-lg hover:bg-[#8a63d7]  transition-all"
           >
             <FaArrowLeft size={16} />
             Kembali ke Beranda
-          </Link>
+          </button>
         </div>
       </div>
     </div>

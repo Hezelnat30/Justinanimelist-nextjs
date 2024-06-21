@@ -15,3 +15,8 @@ export async function getAnimePagination(resource, query) {
   const animePagination = result.pagination;
   return animePagination;
 }
+
+export async function getRecommendedAnime(resource, objectProperty) {
+  const recommendedAnime = await getAnimeData(resource, objectProperty);
+  return recommendedAnime.flatMap((item) => item.entry);
+}

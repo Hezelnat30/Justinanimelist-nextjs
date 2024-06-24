@@ -31,9 +31,9 @@ export default function Pagination({ page, lastPage, setPage }) {
       >
         <CaretCircleLeft
           size={30}
-          className="font-bold text-color-secondary group-hover:text-color-accent  cursor-pointer transition-all "
+          className="font-bold text-color-secondary group-hover:text-color-accent-100  cursor-pointer transition-all "
         />
-        <span className="mt-1 ms-1 group-hover:text-color-accent transition-all ">
+        <span className="mt-1 ms-1 group-hover:text-color-accent-100 transition-all ">
           Prev
         </span>
       </button>
@@ -46,12 +46,12 @@ export default function Pagination({ page, lastPage, setPage }) {
         disabled={page >= lastPage}
         onClick={nextPage}
       >
-        <span className="mt-1 me-1 group-hover:text-color-accent transition-all ">
+        <span className="mt-1 me-1 group-hover:text-color-accent-100 transition-all ">
           Next
         </span>
         <CaretCircleRight
           size={30}
-          className="font-bold text-color-secondary group-hover:text-color-accent  cursor-pointer transition-all "
+          className="font-bold text-color-secondary group-hover:text-color-accent-100  cursor-pointer transition-all "
         />
       </button>
     </div>

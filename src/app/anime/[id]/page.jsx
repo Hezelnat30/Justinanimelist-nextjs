@@ -1,14 +1,17 @@
-import { getAnimeData } from "@/apis/api";
 import VideoPlayer from "@/components/Utilities/VideoPlayer";
+import { getAnimeData } from "@/libs/api-libs";
 import Image from "next/image";
 export default async function Page({ params }) {
   const { id } = params;
   const animeById = await getAnimeData(`anime/${id}`);
   console.log(animeById);
   return (
-    <div className="container py-10 flex flex-wrap w-full mx-auto justify-center items-center">
+    <section
+      id="detail-anime"
+      className="container pt-16 flex flex-wrap w-full mx-auto justify-center items-center"
+    >
       <div className="w-full md:w-4/5 lg:w-2/5 px-8 md:px-10 py-5 self-start">
-        <h1 className="uppercase text-center lg:text-start lg:hidden font-extrabold md:text-4xl text-2xl sm:text-3xl text-color-accent mb-8">
+        <h1 className="uppercase text-center lg:text-start lg:hidden font-extrabold md:text-4xl text-2xl sm:text-3xl text-color-accent-100 mb-8">
           {animeById.title} - {animeById.year}
         </h1>
         <Image
@@ -20,7 +23,7 @@ export default async function Page({ params }) {
         />
       </div>
       <div className="w-full md:w-4/5 lg:w-3/5 self-start px-6 pt-4 md:pt-10 md:px-10 ">
-        <h1 className="uppercase hidden lg:block font-extrabold text-5xl text-color-accent">
+        <h1 className="uppercase hidden lg:block font-extrabold text-5xl text-color-accent-100">
           {animeById.title} - {animeById.year}
         </h1>
         <p className="text-color-secondary text-base lg:text-xl text-justify">
@@ -28,6 +31,6 @@ export default async function Page({ params }) {
         </p>
       </div>
       <VideoPlayer youtubeId={animeById.trailer.youtube_id} />
-    </div>
+    </section>
   );
 }

@@ -10,6 +10,10 @@ const nextConfig = {
         hostname: "cdn.myanimelist.net",
         protocol: "https",
       },
+      {
+        hostname: "avatars.githubusercontent.com",
+        protocol: "https",
+      },
     ],
   },
 };

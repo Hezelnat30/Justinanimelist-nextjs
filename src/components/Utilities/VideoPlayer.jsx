@@ -40,7 +40,7 @@ export default function VideoPlayer({ youtubeId }) {
         onClick={handleVideoPlayer}
       >
         {isOpen ? (
-          <IoClose size={26} className="text-color-accent" />
+          <IoClose size={26} className="text-color-accent-100" />
         ) : (
           <ButtonWatchTrailer />
         )}

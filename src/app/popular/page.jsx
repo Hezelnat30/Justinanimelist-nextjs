@@ -2,8 +2,8 @@
 import AnimeList from "@/components/AnimeList";
 import HeaderMenu from "@/components/Utilities/HeaderMenu";
 import Pagination from "@/components/Utilities/Pagination";
+import { getAnimeData, getAnimePagination } from "@/libs/api-libs";
 import { useEffect, useState } from "react";
-import { getAnimeData, getAnimePagination } from "../../apis/api";
 import Loading from "../loading";
 
 export default function Page() {
@@ -29,7 +29,7 @@ export default function Page() {
   }, [page]);
 
   return (
-    <section className="container p-4 sm:py-6 sm:px-0">
+    <section className="container p-4 sm:pt-20 sm:px-0">
       <HeaderMenu title={`All Popular Anime #${page}`} />
       {loading ? (
         <Loading />

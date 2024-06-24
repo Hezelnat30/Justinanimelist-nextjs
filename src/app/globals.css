@@ -8,6 +8,11 @@
   box-sizing: border-box;
 }
 
+.navbar-fixed {
+  @apply fixed z-[999]  transition md:backdrop-blur-sm duration-200 ease-in-out;
+  box-shadow: inset 0 -1px 0 0 rgba(0, 0, 0, 0.3);
+}
+
 img {
   transition: 0.3s ease-in-out all;
 }

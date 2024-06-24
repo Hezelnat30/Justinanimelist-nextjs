@@ -18,5 +18,11 @@ export async function getAnimePagination(resource, query) {
 
 export async function getRecommendedAnime(resource, objectProperty) {
   const recommendedAnime = await getAnimeData(resource, objectProperty);
-  return recommendedAnime.flatMap((item) => item.entry);
+  return recommendedAnime.flatMap((item) => item[objectProperty]);
+}
+
+export function getRandomRecommendedAnime(data, gap) {
+  const first = ~~(Math.random() * (data.length - gap) + 1);
+  const last = first + gap;
+  return data.slice(first, last);
 }

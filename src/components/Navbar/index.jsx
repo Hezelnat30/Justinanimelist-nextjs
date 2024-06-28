@@ -26,15 +26,27 @@ export default function Navbar() {
   }`;
   return (
     <header className={navbarWeb}>
-      <div className="container flex sm:flex-row flex-col justify-between items-center gap-2 p-4 sm:py-3 sm:px-0">
+      <div className="container flex-col sm:flex-row sm:justify-between items-center gap-2 p-4 sm:py-3 sm:px-0 hidden sm:flex">
         <Link
           href="/"
-          className="w-1/4 font-bold self-center text-white text-2xl uppercase"
+          className="w-1/4 font-bold self-center text-white text-3xl uppercase"
         >
           Justin Anime List
         </Link>
         <InputSearch setFocus={setFocus} />
         <UserActionButton />
+      </div>
+      <div className="container flex flex-col items-center gap-2 p-4 sm:hidden">
+        <div className="flex w-full justify-between">
+          <Link
+            href="/"
+            className="w-3/4 font-bold self-center text-white text-xl uppercase"
+          >
+            Justin Anime List
+          </Link>
+          <UserActionButton />
+        </div>
+        <InputSearch setFocus={setFocus} />
       </div>
     </header>
   );

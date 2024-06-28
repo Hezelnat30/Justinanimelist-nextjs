@@ -4,9 +4,9 @@ import Link from "next/link";
 export default function AnimeList({ data }) {
   return (
     <div className="grid lg:grid-cols-4 sm:grid-cols-3 grid-cols-2 gap-4 sm:gap-12">
-      {data?.map(({ mal_id, images, title, synopsis }) => (
+      {data?.map(({ mal_id, images, title, synopsis }, index) => (
         <div
-          key={mal_id}
+          key={index}
           className="group relative items-center rounded-xl justify-center overflow-hidden cursor-pointer hover:shadow-lg hover:shadow-color-accent-100/35 text-color-secondary hover:text-color-accent-100 shadow-color-accent-100 transition-all"
         >
           <Link href={`/anime/${mal_id}`}>

@@ -1,6 +1,6 @@
-import { League_Spartan } from "next/font/google";
 import "@/app/globals.css";
 import Navbar from "@/components/Navbar";
+import { League_Spartan } from "next/font/google";
 
 const spartan = League_Spartan({
   subsets: ["latin"],

@@ -1,3 +1,4 @@
+import CommentInput from "@/components/AnimeList/CommentInput";
 import WatchlistButton from "@/components/AnimeList/WatchlistButton";
 import VideoPlayer from "@/components/Utilities/VideoPlayer";
 import { getAnimeData } from "@/libs/api-libs";
@@ -15,12 +16,10 @@ export default async function Page({ params }) {
     },
   });
 
-  console.log(collection);
-
   return (
     <section
       id="detail-anime"
-      className="container pt-16 flex flex-wrap w-full mx-auto justify-center items-center"
+      className="container pt-40 pb-10 md:pt-16 flex flex-wrap w-full mx-auto justify-center items-center"
     >
       <div className="w-full md:w-4/5 lg:w-2/5 px-8 md:px-10 py-5 self-start">
         <h1 className="uppercase text-center lg:text-start lg:hidden font-extrabold md:text-4xl text-2xl sm:text-3xl text-color-accent-100 mb-8">
@@ -51,7 +50,27 @@ export default async function Page({ params }) {
         <p className="text-color-secondary text-base lg:text-xl text-justify">
           {animeById.synopsis}
         </p>
+        <div className="grid grid-cols-2 mt-2 lg:grid-cols-4 gap-2 text-color-secondary">
+          <p className="border-3 border-color-accent-100 rounded px-3 py-1">
+            <span className="font-semibold">Total Episode :</span>{" "}
+            {animeById.episodes}
+          </p>
+          <p className="border-3 border-color-accent-100 rounded px-3 py-1">
+            <span className="font-semibold">Score :</span> {animeById.score}/10
+          </p>
+          <p className="border-3 border-color-accent-100 rounded px-3 py-1">
+            <span className="font-semibold">Rating :</span> {animeById.rating}
+          </p>
+          <p className="border-3 border-color-accent-100 rounded px-3 py-1">
+            <span className="font-semibold">Status :</span> {animeById.status}
+          </p>
+        </div>
       </div>
+      <CommentInput
+        anime_mal_id={id}
+        user_email={user?.email}
+        username={user?.name}
+      />
       <VideoPlayer youtubeId={animeById.trailer.youtube_id} />
     </section>
   );

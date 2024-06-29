@@ -29,4 +29,6 @@ model Comment {
   user_email               String
   comment                  String
   username                 String
+  anime_title              String?
+  createdAt                DateTime @default(now())
 }

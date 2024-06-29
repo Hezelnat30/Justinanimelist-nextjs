@@ -9,9 +9,6 @@ module.exports = {
     container: {
       center: true,
     },
-    borderWidth: {
-      3: "3px",
-    },
     extend: {
       boxShadow: {
         "images-shadow": "0 0 15px 3px rgba(239, 160, 11, 1)",
@@ -24,6 +21,9 @@ module.exports = {
       fontFamily: {
         josefin: ["Josefin Sans", "sans-serif"],
         spartan: ["League Spartan", "sans-serif"],
+      },
+      borderWidth: {
+        3: "3px",
       },
       colors: {
         color: {

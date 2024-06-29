@@ -1,3 +1,4 @@
+import CommentBox from "@/components/AnimeList/CommentBox";
 import CommentInput from "@/components/AnimeList/CommentInput";
 import WatchlistButton from "@/components/AnimeList/WatchlistButton";
 import VideoPlayer from "@/components/Utilities/VideoPlayer";
@@ -66,11 +67,17 @@ export default async function Page({ params }) {
           </p>
         </div>
       </div>
-      <CommentInput
-        anime_mal_id={id}
-        user_email={user?.email}
-        username={user?.name}
-      />
+      <div className="w-full flex flex-col">
+        {user && (
+          <CommentInput
+            anime_mal_id={id}
+            user_email={user?.email}
+            username={user?.name}
+            anime_title={animeById.title}
+          />
+        )}
+        <CommentBox anime_mal_id={id} />
+      </div>
       <VideoPlayer youtubeId={animeById.trailer.youtube_id} />
     </section>
   );
